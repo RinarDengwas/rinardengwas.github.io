@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Name – UI Designer</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>Your Name</h1>
-    <p>UI Designer crafting clean and engaging interfaces.</p>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="text-center py-16 bg-white shadow">
+    <h1 class="text-4xl font-bold">Your Name</h1>
+    <p class="text-lg text-gray-600 mt-2">UI/UX Designer crafting beautiful, functional experiences.</p>
   </header>
 
-  <section class="projects">
-    <h2>Selected Work</h2>
+  <main class="max-w-4xl mx-auto px-6 py-10">
+    <section>
+      <h2 class="text-2xl font-semibold mb-6 border-b pb-2">🖼️ Selected Work</h2>
 
-    <div class="project">
-      <img src="assets/images/project1.jpg" alt="Project 1">
-      <h3>E-commerce Redesign</h3>
-      <p>Modernized layout and improved user flow for a clothing store.</p>
-    </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <img src="assets/images/project1.jpg" alt="Project 1" class="rounded mb-4">
+          <h3 class="text-xl font-bold">E-commerce Redesign</h3>
+          <p class="text-gray-600 text-sm mt-1">Modern shopping experience with improved UX and accessibility.</p>
+        </div>
 
-    <div class="project">
-      <img src="assets/images/project2.jpg" alt="Project 2">
-      <h3>Mobile UI Kit</h3>
-      <p>A modular kit for a task manager app — sleek, minimal, and functional.</p>
-    </div>
-  </section>
+        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+          <img src="assets/images/project2.jpg" alt="Project 2" class="rounded mb-4">
+          <h3 class="text-xl font-bold">Mobile UI Kit</h3>
+          <p class="text-gray-600 text-sm mt-1">Designed for productivity apps — clean, minimal, and modular.</p>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>Connect with me:
-      <a href="mailto:your@email.com">Email</a> •
-      <a href="https://dribbble.com/yourname">Dribbble</a> •
-      <a href="https://linkedin.com/in/yourname">LinkedIn</a>
-    </p>
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold mb-4 border-b pb-2">📬 Contact</h2>
+      <p class="text-gray-700">Reach out via 
+        <a href="mailto:your@email.com" class="text-blue-500 hover:underline">email</a>,
+        <a href="https://dribbble.com/yourname" class="text-blue-500 hover:underline">Dribbble</a>, or
+        <a href="https://linkedin.com/in/yourname" class="text-blue-500 hover:underline">LinkedIn</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 py-8 border-t mt-16">
+    &copy; 2025 Your Name. Built with ❤️ and Tailwind CSS.
   </footer>
 </body>
 </html>
