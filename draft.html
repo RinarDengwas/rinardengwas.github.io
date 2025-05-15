@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rinar Dengwas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            offwhite: '#F6F5F4'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .roller {
+      height: 3rem;
+      width: 13ch; /* Adjust this to fit longest title */
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+    }
+
+    .roller #rolltext {
+      position: absolute;
+      top: 0;
+      animation: slide 6s infinite;
+    }
+
+    .roller #rolltext div {
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-weight: 600;
+    }
+
+    @keyframes slide {
+      0% {
+        top: 0;
+      }
+      33.33% {
+        top: -3rem;
+      }
+      66.66% {
+        top: -6rem;
+      }
+      100% {
+        top: 0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .roller {
+        height: 3rem;
+        line-height:3rem;
+      }
+
+      .roller #rolltext {
+        animation: slide-mob 5s infinite;
+      }
+
+      @keyframes slide-mob {
+        0% {
+          top: 0;
+        }
+        25% {
+          top: -3.125rem;
+        }
+        50% {
+          top: -6.25rem;
+        }
+        72.5% {
+          top: -6.375rem;
+        }
+      }
+    }
+  </style>
+</head>
+<body class="bg-offwhite flex flex-col w-full h-full overflow-x-hidden relative">
+  <div class="full w-full justify-center">
+    <nav class="flex h-[15vh] w-full justify-between px-5 py-10 max-w-[60rem]">
+      <div class="logo">
+        <img class="w-24 md:w-28" src="" alt="">
+      </div>
+      <div class="menu-items hidden md:flex gap-8 text-xs text-black uppercase z-30">
+        <a href="#Home" class="menu-item cursor-pointer hover:text-white/60">Home</a>
+        <a href="#About" class="menu-item cursor-pointer hover:text-white/60">About Us</a>
+        <a href="#About" class="menu-item cursor-pointer hover:text-white/60">About Us</a>
+      </div>
+    </nav>
+  </div>
+  <div class="hero-section w-full h-[80vh] flex justify-between relative max-w-[60rem]"> 
+      <div class="heroText h-full w-full z-30 flex flex-col md:justify-center">
+        <span class="font-semibold text-2xl md:text-4xl text-black">Hi! My name is Rinar,</span>
+        <span class="font-semibold text-2xl md:text-4xl flex items-center">
+          I'm a&nbsp;
+          <div class="roller ml-1">
+            <div id="rolltext">
+              <div>UI/UX Designer</div>
+              <div>Web Developer</div>
+              <div>Project Manager</div>
+            </div>
+          </div>
+        </span>
+        <span class="text-[#989898] font-normal text-[10px] md:text-sm md:w-[50%]">
+            I combine creative design, technical development, and strategic thinking to build digital experiences that not only look great but also function seamlessly.
+          <br>
+          Whether leading a project, crafting intuitive user interfaces, or writing clean code, I focus on delivering work that makes an impact.
+        </span>
+      </div>
+  </div>
+  <div class="max-sm:absolute bottom-10 w-full flex max-sm:items-center max-md:flex-col text-white gap-3 text-[10px] tracking-widest pl-4 md:pl-5">
+    <a href="#Projects">
+      <button class="bg-black">asdasdsd</button>
+    </a>
+    <a href="#Projects" style="opacity: 1;">
+      <button class="bg-black hover:bg-color1 Hover w-[14rem] md:w-[12rem] rounded-3xl uppercase text-center font-semibold cursor-pointer py-2" style="opacity: 1; transform: none;">Explore Projects</button>
+    </a>
+  </div>
+</body>
+</html>

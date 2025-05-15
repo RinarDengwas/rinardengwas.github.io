@@ -4,56 +4,95 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rinar Dengwas</title>
-  <script>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            floral: '#FF0000'
+            offwhite: '#F6F5F4'
+          },
+          keyframes: {
+          rotateTextUp: {
+            '0%': { transform: 'translate3d(0, 80px, 0)', opacity: '0' },
+            '10%': { transform: 'translate3d(0, 0, 0)', opacity: '1' },
+            '30%': { transform: 'translate3d(0, 0, 0)', opacity: '1' },
+            '40%': { transform: 'translate3d(0, -40px, 0)', opacity: '0' },
+            '100%': { transform: 'translate3d(0, -40px, 0)', opacity: '0' },
+          },
+          },
+          animation: {
+            rotate1: 'rotateTextUp 10s 0s infinite',
+            rotate2: 'rotateTextUp 10s 3.3s infinite',
+            rotate3: 'rotateTextUp 10s 6.6s infinite',
           }
         }
       }
     }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-floral text-gray-800 font-sans">
-  <header class="text-center py-16 bg-white shadow">
-    <h1 class="text-4xl font-bold">Rinar Dengwas</h1>
-    <p class="text-lg text-gray-600 mt-2">UI/UX Designer, Project Manager, and Web Developer — blending design, strategy, and code to build impactful digital experiences.</p>
-  </header>
+  <style>
+    .rotatingText-content h2 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      text-transform: uppercase;
+    }
+  </style>
 
-  <main class="max-w-4xl mx-auto px-6 py-10">
-    <section>
-      <h2 class="text-2xl font-semibold mb-6 border-b pb-2">🖼️ Selected Work</h2>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
-          <img src="assets/images/project1.jpg" alt="Project 1" class="rounded mb-4">
-          <h3 class="text-xl font-bold">E-commerce Redesign</h3>
-          <p class="text-gray-600 text-sm mt-1">Modern shopping experience with improved UX and accessibility.</p>
-        </div>
-
-        <div class="bg-white p-4 rounded shadow hover:shadow-lg transition">
-          <img src="assets/images/project2.jpg" alt="Project 2" class="rounded mb-4">
-          <h3 class="text-xl font-bold">Mobile UI Kit</h3>
-          <p class="text-gray-600 text-sm mt-1">Designed for productivity apps — clean, minimal, and modular.</p>
+  </head>
+  <body class="bg-offwhite">
+    <div class="section fp-section fp-table fp-is-overflow active fp-completely">
+      <div class=" w-full h-screen flex items-center justify-center backdrop-blur-sm transition-all ease duration-700 overflow-hidden">
+        <div class="mx-auto container grid grid-cols-1 md:grid-cols-3 gap-4 p-10 overflow-hidden md:px-20">
+          <div class="col-span-2 flex flex-col justify-center items-center md:items-start text-center md:text-start" style="opacity: 1; transform: none;">
+            <h3 class="uppercase text-xl font-normal text tracking-[.5rem] text-gray-500" style="opacity: 1; transform: none;">Rinar Dengwas</h3>
+            <div class="relative h-[4rem] rotatingText-content text-5xl md:text-6xl lg:text-7xl font-bold w-full">
+              <h2 class="animate-rotate1">UI/UX Designer</h2>
+              <h2 class="animate-rotate2">Web Developer</h2>
+              <h2 class="animate-rotate3">Project Manager</h2>
+            </div>
+            <p class="title text-md  2xl:text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem]" style="opacity: 1; transform: none;">
+              I’m passionate about creating great experiences and building things that work well and look good. Whether I’m designing, developing, or managing a project, I focus on clear communication, smooth teamwork, and getting things done the right way. I’m adaptable, easy to work with, and always ready to solve problems and help the team succeed.
+            </p>
+                      <div class="buttons flex flex-row justify-center items-center space-x-4 mt-10" style="opacity: 1;">
+            <button class="title mr-3  rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out bg-gray-700 hover:bg-transparent border-transparent hover:border-gray-700 border-2 text-gray-100 hover:text-gray-700 box-border">
+              <a href="">Download CV</a>
+            </button>
+            <button class="title mr-3  rounded-2xl px-8 py-2 shadow-md transition duration-300 ease-in-out transparent border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-gray-100 box-border"><a href="#contact">Contact Me</a></button>
+          </div>
+          </div>
+          <div class=" md:flex col-span-1 mx-auto justify-center items-center ">
+            <div class="bg-white overflow-hidden px-4 py-2 rounded-full shadow-lg grayscale hover:grayscale-0 transition-all ease duration-300 w-fit h-fit">
+              <span class="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
+                  <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27400%27%20height=%27550%27/%3e">
+                </span>
+                <img src="/assets/rinarski.jpg" alt="Rinar" class="rounded-full w-full h-full object-cover" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
+              </span>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="mt-16">
-      <h2 class="text-2xl font-semibold mb-4 border-b pb-2">📬 Contact</h2>
-      <p class="text-gray-700">Reach out via 
-        <a href="mailto:your@email.com" class="text-blue-500 hover:underline">email</a>,
-        <a href="https://dribbble.com/yourname" class="text-blue-500 hover:underline">Dribbble</a>, or
-        <a href="https://linkedin.com/in/yourname" class="text-blue-500 hover:underline">LinkedIn</a>.
-      </p>
-    </section>
-  </main>
-
-  <footer class="text-center text-sm text-gray-500 py-8 border-t mt-16">
-    &copy; 2025 Your Name. Built with ❤️ and Tailwind CSS.
-  </footer>
-</body>
+    </div>
+      <div class="justify-center" style="height: 100%;">
+        <section class="w-full scroll-mt-28">
+          <ul class="flex">
+            <li class="">
+              <hr>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6"><path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"></path><path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"></path><path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"></path></svg>
+                <div class="">
+                   <time datetime="">2016</time>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>
